@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <title>Kotious</title>
+    <style>
+        /* Header Styling */
+        .header {
+            background: linear-gradient(to right, #3498db, #8e44ad);
+            padding: 15px;
+            position: relative;
+        }
+        
+        .sidebar {
+            transition: width 0.3s ease;
+            width: 250px; /* Expanded width */
+        }
+        
+        .sidebar.collapsed {
+            width: 60px; /* Collapsed width */
+        }
+        
+        .sidebar .nav-link span {
+            display: inline; /* Show text by default */
+        }
+        
+        .sidebar.collapsed .nav-link span {
+            display: none; /* Hide text when collapsed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar" id="sidebar">
+        <div class="position-sticky">
+            <h1 class="text-left text-white fw-light fst-italic">Menu</h1>
+            <button class="btn btn-light mb-3" data-bs-toggle="collapse" data-bs-target="#sidebarContent" aria-expanded="true">
+                <i class="bi bi-list" style="color: white;"></i>
+            </button>
+            <div id="sidebarContent" class="collapse show">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fi-rr-home me-2"></i><span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fi-rr-user me-2"></i><span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fi-rr-settings me-2"></i><span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fi-rr-exit me-2"></i><span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
